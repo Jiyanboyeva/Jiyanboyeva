@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjana Jiyanboyeva — Backend & Automation Developer</title>
+  <meta name="description" content="Sanjana Jiyanboyeva — Python Backend & Automation Developer Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Sanjana <span class="logo-glow">Jiyanboyeva</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-uz="O'zim haqimda" data-en="About">O'zim haqimda</a></li>
+        <li><a href="#skills" data-uz="Ko'nikmalar" data-en="Skills">Ko'nikmalar</a></li>
+        <li><a href="#projects" data-uz="Loyihalar" data-en="Projects">Loyihalar</a></li>
+        <li><a href="#experience" data-uz="Tajriba" data-en="Experience">Tajriba</a></li>
+        <li><a href="#education" data-uz="Ta'lim" data-en="Education">Ta'lim</a></li>
+        <li><a href="#certificates" data-uz="Sertifikatlar" data-en="Certificates">Sertifikatlar</a></li>
+        <li><a href="#contact" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">&#9728;&#65039;</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-label" id="langLabel">EN</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-ambient"></div>
+    <div class="hero-content reveal">
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-illustration">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="codeRectBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1C1917"/>
+                  <stop offset="100%" stop-color="#292524"/>
+                </linearGradient>
+                <filter id="amberGlow">
+                  <feGaussianBlur stdDeviation="8" result="blur"/>
+                  <feFlood flood-color="#F59E0B" flood-opacity="0.35" result="color"/>
+                  <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+                  <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- Amber glow behind rounded rect -->
+              <rect x="30" y="30" width="140" height="140" rx="28" fill="#F59E0B" opacity="0.12" filter="url(#amberGlow)"/>
+              <!-- Main dark rounded rectangle -->
+              <rect x="30" y="30" width="140" height="140" rx="28" fill="url(#codeRectBg)" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.25"/>
+              <!-- Glassmorphism diagonal shine -->
+              <line x1="50" y1="30" x2="170" y2="150" stroke="white" stroke-width="18" stroke-linecap="round" opacity="0.04"/>
+              <!-- </> code symbol in white -->
+              <path d="M82 78 L58 100 L82 122" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M118 78 L142 100 L118 122" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="112" y1="70" x2="88" y2="130" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+              <!-- Subtle amber bottom reflection -->
+              <rect x="60" y="166" width="80" height="3" rx="1.5" fill="#F59E0B" opacity="0.15"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="hero-greeting" data-uz="Salom, men" data-en="Hello, I'm">Salom, men</p>
+      <h1 class="hero-name">Sanjana Jiyanboyeva</h1>
+      <p class="hero-title" data-uz="Backend & Avtomatlashtirish Dasturchisi" data-en="Backend & Automation Developer">Backend & Avtomatlashtirish Dasturchisi</p>
+      <div class="hero-badges">
+        <span class="badge">Python</span>
+        <span class="badge">Django</span>
+        <span class="badge">REST API</span>
+        <span class="badge">Automation</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary" data-uz="Bog'lanish" data-en="Get in Touch">Bog'lanish</a>
+        <a href="#projects" class="btn btn-outline" data-uz="Loyihalarni ko'rish" data-en="View Projects">Loyihalarni ko'rish</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="O'zim haqimda" data-en="About Me">O'zim haqimda</h2>
+      <div class="about-grid reveal">
+        <div class="glass-card about-text-card">
+          <p class="about-paragraph" data-uz="Python backend va avtomatlashtirish yo'nalishiga ixtisoslashgan, tizimli fikrlaydigan dasturchiman. Django va Django REST Framework yordamida REST API ishlab chiqish, server tomoni logikasini yaratish hamda backend jarayonlarni avtomatlashtirish bo'yicha amaliy tajribaga egaman. Google Cybersecurity Professional Certificate egasi sifatida backend xavfsizligi va secure coding tamoyillariga alohida e'tibor qarataman." data-en="I am a systematic-thinking developer specialized in Python backend and automation. I have practical experience in developing REST APIs with Django and Django REST Framework, creating server-side logic, and automating backend processes. As a Google Cybersecurity Professional Certificate holder, I pay special attention to backend security and secure coding principles.">Python backend va avtomatlashtirish yo'nalishiga ixtisoslashgan, tizimli fikrlaydigan dasturchiman. Django va Django REST Framework yordamida REST API ishlab chiqish, server tomoni logikasini yaratish hamda backend jarayonlarni avtomatlashtirish bo'yicha amaliy tajribaga egaman. Google Cybersecurity Professional Certificate egasi sifatida backend xavfsizligi va secure coding tamoyillariga alohida e'tibor qarataman.</p>
+        </div>
+        <div class="about-info-cards">
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="info-label" data-uz="Joylashuv" data-en="Location">Joylashuv</span>
+              <span class="info-value">Tuproqqal'a tumani, Xorazm viloyati</span>
+            </div>
+          </div>
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="info-label" data-uz="Email" data-en="Email">Email</span>
+              <span class="info-value"><a href="mailto:sanjanajiyanboyeva@gmail.com">sanjanajiyanboyeva@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="glass-card info-card">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <span class="info-label" data-uz="Tillar" data-en="Languages">Tillar</span>
+              <span class="info-value" data-uz="O'zbek (ona tili), English (B2), Rus (o'rta)" data-en="Uzbek (native), English (B2), Russian (intermediate)">O'zbek (ona tili), English (B2), Rus (o'rta)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Ko'nikmalar" data-en="Skills">Ko'nikmalar</h2>
+      <div class="skills-grid reveal">
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="skill-name">Django / DRF</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-name">PostgreSQL / SQLite</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3 class="skill-name">REST API Development</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-name">Automation Scripts</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="skill-name">JWT Authentication</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+          </div>
+          <h3 class="skill-name">Git / GitHub</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3 class="skill-name">Linux</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="skill-name">Cybersecurity</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="skill-name">Secure Coding</h3>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Loyihalar" data-en="Projects">Loyihalar</h2>
+      <div class="projects-grid">
+        <div class="glass-card project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+          </div>
+          <h3 class="project-title">Automated Report Backend</h3>
+          <p class="project-desc" data-uz="Avtomatik hisobot yaratish tizimi" data-en="Automatic report generation system">Avtomatik hisobot yaratish tizimi</p>
+          <div class="project-line"></div>
+        </div>
+        <div class="glass-card project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-tags">
+            <span class="tag">Django REST</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <h3 class="project-title">Online Booking API</h3>
+          <p class="project-desc" data-uz="Onlayn ro'yxatdan o'tish API" data-en="Online registration API">Onlayn ro'yxatdan o'tish API</p>
+          <div class="project-line"></div>
+        </div>
+        <div class="glass-card project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+          </div>
+          <h3 class="project-title">Task Automation Script</h3>
+          <p class="project-desc" data-uz="Server jarayonlarini avtomatlashtirish" data-en="Server process automation">Server jarayonlarini avtomatlashtirish</p>
+          <div class="project-line"></div>
+        </div>
+        <div class="glass-card project-card reveal">
+          <div class="project-number">04</div>
+          <div class="project-tags">
+            <span class="tag">Django</span>
+          </div>
+          <h3 class="project-title">Secure Feedback Backend</h3>
+          <p class="project-desc" data-uz="Xavfsiz foydalanuvchi murojaat tizimi" data-en="Secure user feedback system">Xavfsiz foydalanuvchi murojaat tizimi</p>
+          <div class="project-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Tajriba" data-en="Experience">Tajriba</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2024 &mdash; <span data-uz="Hozirgi" data-en="Present">Hozirgi</span></span>
+            <h3 class="timeline-title" data-uz="Python Backend Dasturchi" data-en="Python Backend Developer">Python Backend Dasturchi</h3>
+            <p class="timeline-org" data-uz="Mustaqil loyihalar" data-en="Independent Projects">Mustaqil loyihalar</p>
+            <p class="timeline-desc" data-uz="Django REST API, PostgreSQL backend, autentifikatsiya, Python avtomatlashtirish, API test" data-en="Django REST API, PostgreSQL backend, authentication, Python automation, API testing">Django REST API, PostgreSQL backend, autentifikatsiya, Python avtomatlashtirish, API test</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2024 &mdash; <span data-uz="Hozirgi" data-en="Present">Hozirgi</span></span>
+            <h3 class="timeline-title" data-uz="Backend Dasturchi" data-en="Backend Developer">Backend Dasturchi</h3>
+            <p class="timeline-org">Muhammad Al-Xorazmiy Vorislari</p>
+            <p class="timeline-desc" data-uz="Backend arxitektura, REST API, avtomatlashtirish skriptlari, real loyiha mashg'ulotlar" data-en="Backend architecture, REST API, automation scripts, real project workshops">Backend arxitektura, REST API, avtomatlashtirish skriptlari, real loyiha mashg'ulotlar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Ta'lim" data-en="Education">Ta'lim</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2024 &mdash; <span data-uz="Hozirgi" data-en="Present">Hozirgi</span></span>
+            <h3 class="timeline-title" data-uz="Muhammad Al-Xorazmiy Vorislari" data-en="Heirs of Muhammad Al-Khwarizmi">Muhammad Al-Xorazmiy Vorislari</h3>
+            <p class="timeline-desc" data-uz="Python, Django, Backend, Automation yo'nalishlari bo'yicha ta'lim" data-en="Education in Python, Django, Backend, Automation">Python, Django, Backend, Automation yo'nalishlari bo'yicha ta'lim</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date" data-uz="Hozirgi" data-en="Current">Hozirgi</span>
+            <h3 class="timeline-title" data-uz="11-sinf o'quvchisi" data-en="11th grade student">11-sinf o'quvchisi</h3>
+            <p class="timeline-org">Tuproqqal'a</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section class="section section-alt" id="certificates">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Sertifikatlar" data-en="Certificates">Sertifikatlar</h2>
+      <div class="certificates-grid">
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/4NKF1XLL1WUX" target="_blank" rel="noopener noreferrer" class="glass-card cert-card cert-card-link reveal">
+          <div class="cert-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3 class="cert-title">Google Cybersecurity Professional Certificate</h3>
+          <p class="cert-issuer">Coursera</p>
+          <div class="cert-badge" data-uz="Tasdiqlangan" data-en="Verified">Tasdiqlangan</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal" data-uz="Bog'lanish" data-en="Get in Touch">Bog'lanish</h2>
+      <div class="contact-grid reveal">
+        <div class="glass-card contact-info-card">
+          <h3 class="contact-heading" data-uz="Bog'lanish ma'lumotlari" data-en="Contact Information">Bog'lanish ma'lumotlari</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">Email</span>
+              <a href="mailto:sanjanajiyanboyeva@gmail.com" class="contact-item-value">sanjanajiyanboyeva@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label" data-uz="Joylashuv" data-en="Location">Joylashuv</span>
+              <span class="contact-item-value">Tuproqqal'a tumani, Xorazm viloyati</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <a href="#" class="contact-item-value">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card contact-form-card">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="formName" data-uz="Ismingiz" data-en="Your Name">Ismingiz</label>
+              <input type="text" id="formName" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="formEmail" data-uz="Emailingiz" data-en="Your Email">Emailingiz</label>
+              <input type="email" id="formEmail" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="formMessage" data-uz="Xabaringiz" data-en="Your Message">Xabaringiz</label>
+              <textarea id="formMessage" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" data-uz="Yuborish" data-en="Send Message">Yuborish</button>
+          </form>
+          <div class="form-success hidden" id="formSuccess">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <p data-uz="Xabaringiz yuborildi!" data-en="Message sent successfully!">Xabaringiz yuborildi!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">Sanjana Jiyanboyeva</div>
+      <p class="footer-copy">&copy; 2026 Sanjana Jiyanboyeva. <span data-uz="Barcha huquqlar himoyalangan." data-en="All rights reserved.">Barcha huquqlar himoyalangan.</span></p>
+      <div class="footer-links">
+        <a href="mailto:sanjanajiyanboyeva@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
